@@ -1,27 +1,32 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Button from '../components/button'
-import {deleteImage} from '../actions/index'
+import { deleteImage } from '../actions/image-action'
 
 class ImageList extends React.Component {
+
+  deleteImageFromStore(id) {
+    this.props.deleteImage(id);
+  }
+
   showList() {
     return this.props.images.map((image) => {
       return (
-        <div className="block" key={image.id}>
+        <div className="block" key={ image.id }>
           <div className="image-block">
-            <div className="image-block__title">{image.title}</div>
-            <Button className="button button_red" type="button" value="Delete" onClick={() => {this.props.deleteImage(image)}}/>
+            <div className="image-block__title">{ image.title }</div>
+            <Button id={ image.id } className="button button_red" type="button" value="Delete"
+                    onClick={this.deleteImageFromStore.bind(this, image.id)}/>
           </div>
-          <img className="image" src={image.src} alt={image.alt}/>
+          <img className="image" src={ image.src } alt={ image.title }/>
         </div>
       );
     });
   }
   render() {
     return (
-      <div>
-        {this.showList()}
+      <div className="wrapper-block">
+        { this.showList() }
       </div>
     );
   }
@@ -29,14 +34,18 @@ class ImageList extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    images: state.images,
-  };
+    images: state.images
+  }
 }
 
-function matchDispatchToProps(dispatch) {
-  return bindActionCreators({deleteImage: deleteImage}, dispatch);
+function mapDispatchToProps(dispatch) {
+  return {
+    deleteImage: id => {
+      dispatch( deleteImage( id ) )
+    }
+  }
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(ImageList);
+export default connect(mapStateToProps, mapDispatchToProps)(ImageList);
 
 

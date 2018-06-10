@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
-@media screen and (max-width: 650px) {
-  .button {
-    width: 80%;
-    display: block; } }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -19,18 +15,25 @@ body {
   background-color: #fff; }
 
 .container {
+  width: 100%;
   margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; }
+
+.wrapper-block {
   width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center; }
 
 .header {
   width: 100%;
   height: 50px;
   margin-bottom: 5%;
-  padding-left: 2em;
+  padding-left: 1%;
   border-bottom: 1px solid darkgray;
   display: flex;
   align-items: center;
@@ -50,8 +53,8 @@ body {
 .button {
   font-weight: 700;
   min-width: 100px;
-  height: 40px;
   min-height: 40px;
+  padding: 10px;
   cursor: pointer;
   text-transform: uppercase;
   color: #2efe2e;
@@ -67,11 +70,11 @@ body {
     border: none; }
 
 .block {
-  width: 700px;
+  width: 70%;
   margin-bottom: 5%; }
 
 .image-block {
-  max-width: 100%;
+  width: 100%;
   height: 5%;
   padding: 0 10px;
   border: 1px solid darkgray;
@@ -86,12 +89,6 @@ body {
 .image {
   max-width: 100%; }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center; }
-
 .popup {
   position: fixed;
   top: 0;
@@ -105,10 +102,12 @@ body {
 
 .popup_inner {
   position: absolute;
-  top: 35%;
-  right: 35%;
+  top: 25%;
+  right: 25%;
   bottom: 15%;
-  left: 35%;
+  left: 25%;
+  min-width: 30%;
+  min-height: 40%;
   margin: auto;
   padding-top: 2%;
   text-align: center;
@@ -122,6 +121,7 @@ body {
 
 .button-wrapper {
   width: 80%;
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -132,7 +132,9 @@ body {
   height: 15%;
   margin-bottom: 15px;
   padding: 0 10px; }
-  .input:focus, .input:hover {
-    outline: none; }
+
+@media screen and (max-width: 568px) {
+  .button {
+    width: 70%; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from './header';
-import ImageBlock from './image-block';
 import ImageList from '../containers/image-list'
-import PopupButton from './popup';
+import PopupButton from './popup-button';
 
 const Main = () => {
   return (
@@ -12,10 +11,11 @@ const Main = () => {
         <PopupButton />
       </div>
       <div className="container">
-        <ImageList />
+        <div className="wrapper">
+          <ImageList />
+        </div>
       </div>
     </div>
-
   );
 };
 

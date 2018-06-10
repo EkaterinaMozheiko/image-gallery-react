@@ -4,7 +4,7 @@
   "main": "index.js",
   "repository": "git@github.com:MEkaterina/image-gallery.git",
   "author": "EkaterinaMozheiko",
-  "license": "",
+  "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development"
@@ -39,8 +39,7 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.12",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-cli": "^2.0.12"
   },
   "moduleRoots": [
     "./packages"
