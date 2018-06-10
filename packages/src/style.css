@@ -67,7 +67,8 @@ body {
     border: none; }
 
 .block {
-  width: 60%; }
+  width: 700px;
+  margin-bottom: 5%; }
 
 .image-block {
   max-width: 100%;
@@ -86,7 +87,6 @@ body {
   max-width: 100%; }
 
 .wrapper {
-  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;

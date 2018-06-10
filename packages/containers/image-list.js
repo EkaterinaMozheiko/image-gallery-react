@@ -2,6 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Button from '../components/button'
+import {deleteImage} from '../actions/index'
 
 class ImageList extends React.Component {
   showList() {
@@ -10,7 +11,7 @@ class ImageList extends React.Component {
         <div className="block" key={image.id}>
           <div className="image-block">
             <div className="image-block__title">{image.title}</div>
-            <Button className="button button_red" type="button" value="Delete" />
+            <Button className="button button_red" type="button" value="Delete" onClick={() => {this.props.deleteImage(image)}}/>
           </div>
           <img className="image" src={image.src} alt={image.alt}/>
         </div>
@@ -32,6 +33,10 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(ImageList);
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({deleteImage: deleteImage}, dispatch);
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(ImageList);
 
 
