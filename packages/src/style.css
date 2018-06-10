@@ -20,6 +20,7 @@ body {
 
 .container {
   margin-bottom: 2%;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -66,7 +67,7 @@ body {
     border: none; }
 
 .block {
-  width: 80%; }
+  width: 60%; }
 
 .image-block {
   max-width: 100%;
@@ -130,9 +131,8 @@ body {
   width: 80%;
   height: 15%;
   margin-bottom: 15px;
-  padding: 0 10px;
-  outline: none; }
-  .input:first-child {
-    margin-right: 15px; }
+  padding: 0 10px; }
+  .input:focus, .input:hover {
+    outline: none; }
 
 /*# sourceMappingURL=style.css.map */

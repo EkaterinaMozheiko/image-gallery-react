@@ -11,16 +11,17 @@ class ImageBlock extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <div className="block">
-          <div className="image-block">
-            <div className="image-block__title">Flower</div>
-            <Button className="button button_red" type="button" value="Delete" />
-          </div>
 
-        </div>
       </div>
     );
   }
 }
+
+/*<div className="block">
+  <div className="image-block">
+    <div className="image-block__title">Flower</div>
+    <Button className="button button_red" type="button" value="Delete" />
+  </div>
+</div>*/
 
 export default ImageBlock;

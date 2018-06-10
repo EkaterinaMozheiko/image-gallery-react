@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './header';
 import ImageBlock from './image-block';
+import ImageList from '../containers/image-list'
 import PopupButton from './popup';
 
 const Main = () => {
@@ -11,7 +12,7 @@ const Main = () => {
         <PopupButton />
       </div>
       <div className="container">
-        <ImageBlock />
+        <ImageList />
       </div>
     </div>
 
